@@ -1,11 +1,17 @@
 from collections import Counter
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        result = set()
-        for i in range(len(nums)):
-            if nums.count(nums[i]) == 2:
-                result.add(nums[i])
-        return list(result)
+        result = []
+        for num in nums:
+            idx = abs(num) - 1
+            if nums[idx] < 0:
+                result.append(abs(num))
+            else:
+                nums[idx] = -nums[idx]
+        return result
+      
+            
+        # First solution
 
         # nums_dict = Counter(nums)
         # result = []
