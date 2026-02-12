@@ -1,29 +1,19 @@
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
-        
+        from collections import Counter
+        count = 0
         s_counter = Counter(s)
         t_counter = Counter(t)
-
-      
-
-        count = 0
-
         if s_counter == t_counter:
-            return 0
-
-        for key in s_counter:
-            while s_counter[key] != t_counter[key]:
-
-                if s_counter[key] > t_counter[key]:
-                    t_counter[key] += 1
-                    count += 2
-                    
-                elif s_counter[key] < t_counter[key]:
-                    t_counter[key] -= 1
-                    count -= 1
-
-        for ky in t_counter:
-            if ky not in s_counter:
-                count -= t_counter[ky]
-
+            return 0 
+        else:
+            for key in s_counter:
+                if key not in t_counter:
+                    count += s_counter[key]
+                else:
+                    if s_counter[key] > t_counter[key]:
+                        count += s_counter[key] - t_counter[key]
         return count
+
+
+        
