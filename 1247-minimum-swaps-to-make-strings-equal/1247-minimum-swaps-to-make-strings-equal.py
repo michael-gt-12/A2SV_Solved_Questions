@@ -1,17 +1,3 @@
-# class Solution:
-#     def minimumSwap(self, s1: str, s2: str) -> int:
-#         from collections import Counter
-
-#         s1_freq = {"x":s1.count("x"),"y":s1.count("y")}
-#         s2_freq = {"x":s2.count("x"),"y":s2.count("y")}
-
-#         if s1 == s2:
-#             return 0
-#         else:
-#             if sorted(s1_freq.values()) == sorted(s2_freq.values()):
-#                 return max(s1_freq.values())
-#             else:
-#                 return -1
 
 class Solution:
     def minimumSwap(self, s1: str, s2: str) -> int:
