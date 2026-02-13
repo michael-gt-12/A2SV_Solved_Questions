@@ -7,7 +7,7 @@ class Solution:
 
         if len(word1) == len(word2):
             if set(word1) == set(word2):
-                if list(word1_freq.values()).sort() == list(word2_freq.values()).sort():
+                if sorted(list(word1_freq.values())) == sorted(list(word2_freq.values())):
                     return True
                 else:
                     return False
