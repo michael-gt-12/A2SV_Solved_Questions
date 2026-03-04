@@ -23,5 +23,5 @@ for _ in range(t):
             ans.append((3, i + 1))
     
     print(len(ans))
-    for y, x in ans:
-        print(y, x)
+    for x, y in ans:
+        print(x, y)
