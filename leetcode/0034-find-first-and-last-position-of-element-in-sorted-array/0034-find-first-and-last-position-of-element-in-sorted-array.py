@@ -17,21 +17,25 @@ class Solution:
         if index == -1:
             return [-1,-1]
         else:
-            i = index
-            while i < len(nums):
-                if nums[index] == nums[i]:
-                    i += 1
-                else:
-                    break
+            left = bisect_left(nums,target)
+            right = bisect_right(nums,target)
+            return [left , right-1]
 
-            j = index
-            while j > -1:
-                if nums[index] == nums[j]:
-                    j -= 1
-                else:
-                    break
+            # i = index
+            # while i < len(nums):
+            #     if nums[index] == nums[i]:
+            #         i += 1
+            #     else:
+            #         break
 
-            return [j+1,i-1]
+            # j = index
+            # while j > -1:
+            #     if nums[index] == nums[j]:
+            #         j -= 1
+            #     else:
+            #         break
+
+            # return [j+1,i-1]
 
 
 
