@@ -19,10 +19,10 @@ class Solution:
             count += 1
             i += 1
 
-        if nums.count(1) == len(nums):
-            return count 
-        else:
+        if not nums[-1] or not nums[-2]:
             return -1
+        
+        return count
 
 
 
