@@ -15,7 +15,7 @@ class Solution:
                 mon_dec.pop()
             mon_dec.append(nums[r])
 
-            while mon_dec and mon_inc and not mon_dec[0] - mon_inc[0] <= limit:
+            while mon_dec and mon_inc and mon_dec[0] - mon_inc[0] > limit:
                 if mon_dec[0] == nums[left]:
                     mon_dec.popleft()
                 if mon_inc[0] == nums[left]:
